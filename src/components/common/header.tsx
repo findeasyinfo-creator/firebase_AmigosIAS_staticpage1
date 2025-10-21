@@ -10,7 +10,6 @@ const NAV_LINKS = [
   {name: 'Courses', href: '#courses'},
   {name: 'Faculty', href: '#faculty'},
   {name: 'Success Stories', href: '#success-stories'},
-  {name: 'Study Planner', href: '#study-planner'},
 ];
 
 const Logo = () => (
