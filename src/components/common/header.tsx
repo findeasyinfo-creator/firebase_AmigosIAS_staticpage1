@@ -8,6 +8,7 @@ import React from 'react';
 
 const NAV_LINKS = [
   {name: 'Courses', href: '#courses'},
+  {name: 'Why Amigos IAS', href: '#why-choose-us'},
   {name: 'Faculty', href: '#faculty'},
   {name: 'Success Stories', href: '#success-stories'},
 ];

@@ -2,6 +2,7 @@ import {GraduationCap} from 'lucide-react';
 
 const NAV_LINKS = [
   {name: 'Courses', href: '#courses'},
+  {name: 'Why Amigos IAS', href: '#why-choose-us'},
   {name: 'Faculty', href: '#faculty'},
   {name: 'Testimonials', href: '#success-stories'},
   {name: 'Contact', href: '#contact'},
