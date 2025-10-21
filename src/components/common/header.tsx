@@ -3,8 +3,9 @@
 import {Button} from '@/components/ui/button';
 import {Sheet, SheetContent, SheetTrigger} from '@/components/ui/sheet';
 import {cn} from '@/lib/utils';
-import {GraduationCap, Menu} from 'lucide-react';
+import {Menu} from 'lucide-react';
 import React from 'react';
+import Image from 'next/image';
 
 const NAV_LINKS = [
   {name: 'Courses', href: '#courses'},
@@ -15,7 +16,7 @@ const NAV_LINKS = [
 
 const Logo = () => (
   <a href="#" className="flex items-center gap-2">
-    <GraduationCap className="h-8 w-8 text-primary" />
+    <Image src="/logo.png" alt="Amigos IAS Logo" width={40} height={40} className="rounded-full" />
     <span className="font-headline text-2xl font-bold">Amigos IAS</span>
   </a>
 );

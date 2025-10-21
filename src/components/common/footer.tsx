@@ -1,4 +1,4 @@
-import {GraduationCap} from 'lucide-react';
+import Image from 'next/image';
 
 const NAV_LINKS = [
   {name: 'Courses', href: '#courses'},
@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div className="flex flex-col gap-2">
             <a href="#" className="mb-2 flex items-center gap-2">
-              <GraduationCap className="h-8 w-8 text-primary" />
+              <Image src="/logo.png" alt="Amigos IAS Logo" width={40} height={40} className="rounded-full" />
               <span className="font-headline text-2xl font-bold">Amigos IAS</span>
             </a>
             <p className="text-muted-foreground">Hyderabad's most trusted and loved IAS Academy.</p>
