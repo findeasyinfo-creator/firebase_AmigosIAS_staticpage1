@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="flex flex-col gap-2">
             <a href="#" className="mb-2 flex items-center gap-2">
               <GraduationCap className="h-8 w-8 text-primary" />
-              <span className="font-headline text-2xl font-bold">AmigosIAS Hub</span>
+              <span className="font-headline text-2xl font-bold">Amigos IAS</span>
             </a>
             <p className="text-muted-foreground">Hyderabad's most trusted and loved IAS Academy.</p>
           </div>
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} AmigosIAS Hub. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Amigos IAS. All rights reserved.</p>
         </div>
       </div>
     </footer>

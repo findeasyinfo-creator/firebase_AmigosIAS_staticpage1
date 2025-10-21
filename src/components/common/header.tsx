@@ -15,7 +15,7 @@ const NAV_LINKS = [
 const Logo = () => (
   <a href="#" className="flex items-center gap-2">
     <GraduationCap className="h-8 w-8 text-primary" />
-    <span className="font-headline text-2xl font-bold">AmigosIAS Hub</span>
+    <span className="font-headline text-2xl font-bold">Amigos IAS</span>
   </a>
 );
 
