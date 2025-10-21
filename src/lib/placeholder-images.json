@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "faculty-1",
+      "description": "Headshot of Dr. Anirudh Sharma",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwwfHx8fDE3NjA5NjgxMDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional headshot"
+    },
+    {
+      "id": "faculty-2",
+      "description": "Headshot of Prof. Meera Kapoor",
+      "imageUrl": "https://images.unsplash.com/photo-1721441933143-643398bed6f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzbWlsaW5nJTIwYWNhZGVtaWN8ZW58MHx8fHwxNzYxMDMyODEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smiling academic"
+    },
+    {
+      "id": "faculty-3",
+      "description": "Headshot of Mr. Vikram Rathore",
+      "imageUrl": "https://images.unsplash.com/photo-1758270704417-26c1244cfaf3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxleHBlcmllbmNlZCUyMHRlYWNoZXJ8ZW58MHx8fHwxNzYxMDMyODEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "experienced teacher"
+    },
+    {
+      "id": "faculty-4",
+      "description": "Headshot of Ms. Sunita Reddy",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx5b3VuZyUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NjEwMzI4MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "young professional"
+    },
+    {
+      "id": "success-1",
+      "description": "Photo of Priya Singh, a successful student",
+      "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYXBweSUyMHN0dWRlbnR8ZW58MHx8fHwxNzYxMDMyODEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy student"
+    },
+    {
+      "id": "success-2",
+      "description": "Photo of Rohan Mehta, a successful student",
+      "imageUrl": "https://images.unsplash.com/photo-1759311097621-012205dd337b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm91ZCUyMGdyYWR1YXRlfGVufDB8fHx8MTc2MTAzMjgxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "proud graduate"
+    },
+    {
+      "id": "success-3",
+      "description": "Photo of Anjali Desai, a successful student",
+      "imageUrl": "https://images.unsplash.com/photo-1758518729466-827cd8293992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb25maWRlbnQlMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzYxMDMyODEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "confident professional"
+    },
+    {
+      "id": "hero-background",
+      "description": "A vibrant image of students studying or a modern library",
+      "imageUrl": "https://images.unsplash.com/photo-1674653760708-f521366e5cde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBsaWJyYXJ5fGVufDB8fHx8MTc2MDk2MTk3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern library"
+    }
+  ]
 }
