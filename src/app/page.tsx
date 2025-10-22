@@ -1,3 +1,6 @@
+'use client';
+
+import React from 'react';
 import Header from '@/components/common/header';
 import Hero from '@/components/sections/hero';
 import Courses from '@/components/sections/courses';
@@ -8,12 +11,14 @@ import Contact from '@/components/sections/contact';
 import Footer from '@/components/common/footer';
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = React.useState('');
+
   return (
     <div className="flex min-h-dvh flex-col bg-background">
-      <Header />
+      <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <main className="flex-1">
         <Hero />
-        <Courses />
+        <Courses searchQuery={searchQuery} />
         <WhyChooseUs />
         <Faculty />
         <SuccessStories />

@@ -1,6 +1,8 @@
+'use client';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
 import {courses} from '@/lib/data';
 import type {Course} from '@/lib/data';
+import React from 'react';
 
 function CourseCard({course}: {course: Course}) {
   return (
@@ -18,7 +20,17 @@ function CourseCard({course}: {course: Course}) {
   );
 }
 
-export default function Courses() {
+export default function Courses({searchQuery}: {searchQuery: string}) {
+  const filteredCourses = React.useMemo(
+    () =>
+      courses.filter(
+        (course) =>
+          course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          course.description.toLowerCase().includes(searchQuery.toLowerCase())
+      ),
+    [searchQuery]
+  );
+
   return (
     <section id="courses" className="bg-muted py-16 sm:py-24">
       <div className="container mx-auto px-4 md:px-6">
@@ -29,9 +41,11 @@ export default function Courses() {
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {courses.map((course) => (
-            <CourseCard key={course.title} course={course} />
-          ))}
+          {filteredCourses.length > 0 ? (
+            filteredCourses.map((course) => <CourseCard key={course.title} course={course} />)
+          ) : (
+            <p className="text-center text-muted-foreground md:col-span-4">No courses found for your search.</p>
+          )}
         </div>
       </div>
     </section>

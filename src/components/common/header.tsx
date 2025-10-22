@@ -3,9 +3,10 @@
 import {Button} from '@/components/ui/button';
 import {Sheet, SheetContent, SheetTrigger} from '@/components/ui/sheet';
 import {cn} from '@/lib/utils';
-import {Menu} from 'lucide-react';
+import {Menu, Search} from 'lucide-react';
 import React from 'react';
 import Image from 'next/image';
+import {Input} from '@/components/ui/input';
 
 const NAV_LINKS = [
   {name: 'Courses', href: '#courses'},
@@ -30,7 +31,13 @@ const NavLink = ({href, children}: {href: string; children: React.ReactNode}) =>
   </a>
 );
 
-export default function Header() {
+export default function Header({
+  searchQuery,
+  setSearchQuery,
+}: {
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+}) {
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   React.useEffect(() => {
@@ -52,6 +59,16 @@ export default function Header() {
         <Logo />
 
         <nav className="hidden items-center gap-2 md:flex">
+          <div className="relative mr-4">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              type="search"
+              placeholder="Search courses..."
+              className="w-full rounded-full bg-muted pl-10 pr-4"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
           {NAV_LINKS.map((link) => (
             <NavLink key={link.href} href={link.href}>
               {link.name}
@@ -74,6 +91,16 @@ export default function Header() {
               <SheetContent side="right">
                 <div className="flex flex-col gap-6 p-6">
                   <Logo />
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      type="search"
+                      placeholder="Search courses..."
+                      className="w-full rounded-full bg-muted pl-10 pr-4"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                  </div>
                   <nav className="flex flex-col gap-2">
                     {NAV_LINKS.map((link) => (
                       <a
