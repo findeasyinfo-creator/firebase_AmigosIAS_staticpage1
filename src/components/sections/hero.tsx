@@ -63,22 +63,18 @@ function HeroSlide({
 
       <div className="container relative z-10 mx-auto flex h-full flex-col items-start justify-center px-4 text-left md:px-6">
         <div className="max-w-3xl">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-7xl">
-            {slide.title}
-          </h1>
-          <p className="mt-6 text-lg text-foreground md:text-xl">
-            {slide.description.includes('Hyderabad') ? (
-              <>
-                AmigosIAS is{' '}
-                <span className="text-primary drop-shadow-sm">
-                  Hyderabad's most trusted and loved IAS Academy
-                </span>
-                , guiding aspirants to achieve their dreams with expert faculty and a proven methodology.
-              </>
-            ) : (
-              slide.description
-            )}
-          </p>
+          {slide.id === 'slide-1' ? (
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-7xl">
+              <span className="text-primary drop-shadow-sm">AmigosIAS is Hyderabad's</span>
+              <br />
+              most trusted and loved IAS Academy
+            </h1>
+          ) : (
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-7xl">
+              {slide.title}
+            </h1>
+          )}
+          <p className="mt-6 text-lg text-foreground md:text-xl">{slide.description}</p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button size="lg" asChild>
               <a href={slide.cta1.href}>{slide.cta1.text}</a>
