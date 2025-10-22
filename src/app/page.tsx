@@ -15,9 +15,9 @@ export default function Home() {
 
   return (
     <div className="flex min-h-dvh flex-col bg-background">
-      <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Header />
       <main className="flex-1">
-        <Hero />
+        <Hero searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <Courses searchQuery={searchQuery} />
         <WhyChooseUs />
         <Faculty />

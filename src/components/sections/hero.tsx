@@ -1,6 +1,10 @@
+'use client';
+
 import {Button} from '@/components/ui/button';
 import {Carousel, CarouselContent, CarouselItem} from '@/components/ui/carousel';
+import {Input} from '@/components/ui/input';
 import {PlaceHolderImages} from '@/lib/placeholder-images';
+import {Search} from 'lucide-react';
 import Image from 'next/image';
 
 const slides = [
@@ -16,7 +20,8 @@ const slides = [
   {
     id: 'slide-2',
     title: 'Unlock Your Potential with Expert Guidance',
-    description: 'Our personalized mentorship and evidence-based strategies are designed to help you succeed at every stage of the UPSC exam.',
+    description:
+      'Our personalized mentorship and evidence-based strategies are designed to help you succeed at every stage of the UPSC exam.',
     imageId: 'hero-background-2',
     cta1: {text: 'Our Courses', href: '#courses'},
     cta2: {text: 'Meet the Faculty', href: '#faculty'},
@@ -31,7 +36,15 @@ const slides = [
   },
 ];
 
-function HeroSlide({slide}: {slide: (typeof slides)[0]}) {
+function HeroSlide({
+  slide,
+  searchQuery,
+  setSearchQuery,
+}: {
+  slide: (typeof slides)[0];
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+}) {
   const heroImage = PlaceHolderImages.find((img) => img.id === slide.imageId);
   return (
     <CarouselItem className="relative h-[80dvh] w-full">
@@ -45,8 +58,8 @@ function HeroSlide({slide}: {slide: (typeof slides)[0]}) {
           priority={slides.indexOf(slide) === 0}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/30 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/70 to-transparent" />
 
       <div className="container relative z-10 mx-auto flex h-full flex-col items-start justify-center px-4 text-left md:px-6">
         <div className="max-w-3xl">
@@ -66,13 +79,23 @@ function HeroSlide({slide}: {slide: (typeof slides)[0]}) {
               slide.description
             )}
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button size="lg" asChild>
               <a href={slide.cta1.href}>{slide.cta1.text}</a>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a href={slide.cta2.href}>{slide.cta2.text}</a>
             </Button>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              <Input
+                type="search"
+                placeholder="Search courses..."
+                className="h-12 w-full rounded-md bg-background/80 pl-10 pr-4 text-base md:w-64"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -80,7 +103,13 @@ function HeroSlide({slide}: {slide: (typeof slides)[0]}) {
   );
 }
 
-export default function Hero() {
+export default function Hero({
+  searchQuery,
+  setSearchQuery,
+}: {
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+}) {
   return (
     <section className="w-full overflow-hidden">
       <Carousel
@@ -92,7 +121,7 @@ export default function Hero() {
       >
         <CarouselContent>
           {slides.map((slide) => (
-            <HeroSlide key={slide.id} slide={slide} />
+            <HeroSlide key={slide.id} slide={slide} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
           ))}
         </CarouselContent>
       </Carousel>
