@@ -24,7 +24,7 @@ const Logo = () => (
 const NavLink = ({href, children}: {href: string; children: React.ReactNode}) => (
   <a
     href={href}
-    className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+    className="rounded-md px-3 py-2 text-sm font-medium transition-colors text-foreground/70 hover:text-foreground"
   >
     {children}
   </a>
@@ -66,7 +66,7 @@ export default function Header() {
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
+                <Button variant="ghost" size="icon">
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Open navigation menu</span>
                 </Button>

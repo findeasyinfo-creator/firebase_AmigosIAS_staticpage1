@@ -68,7 +68,7 @@ function HeroSlide({
           <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground drop-shadow-sm md:text-5xl lg:text-7xl">
             {slide.title}
           </h1>
-          <p className="mt-6 text-lg text-foreground md:text-xl">{slide.description}</p>
+          <p className="mt-6 text-lg text-foreground/80 md:text-xl">{slide.description}</p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button size="lg" asChild>
               <a href={slide.cta1.href}>{slide.cta1.text}</a>
