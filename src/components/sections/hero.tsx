@@ -45,8 +45,8 @@ function HeroSlide({slide}: {slide: (typeof slides)[0]}) {
           priority={slides.indexOf(slide) === 0}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent" />
 
       <div className="container relative z-10 mx-auto flex h-full flex-col items-start justify-center px-4 text-left md:px-6">
         <div className="max-w-3xl">
