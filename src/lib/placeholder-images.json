@@ -47,6 +47,18 @@
       "description": "A vibrant image of students studying or a modern library",
       "imageUrl": "https://images.unsplash.com/photo-1674653760708-f521366e5cde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBsaWJyYXJ5fGVufDB8fHx8MTc2MDk2MTk3OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern library"
+    },
+    {
+      "id": "hero-background-2",
+      "description": "A classroom with students engaged in a lecture",
+      "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGFzc3Jvb20lMjBsZWN0dXJlfGVufDB8fHx8MTc2MjE3OTM5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "classroom lecture"
+    },
+    {
+      "id": "hero-background-3",
+      "description": "Students celebrating graduation",
+      "imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGdyYWR1YXRpb258ZW58MHx8fHwxNzYyMTc5Mzk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students graduation"
     }
   ]
 }
