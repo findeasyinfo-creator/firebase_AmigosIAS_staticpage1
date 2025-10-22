@@ -6,6 +6,8 @@ import {Input} from '@/components/ui/input';
 import {PlaceHolderImages} from '@/lib/placeholder-images';
 import {Search} from 'lucide-react';
 import Image from 'next/image';
+import Autoplay from 'embla-carousel-autoplay';
+import React from 'react';
 
 const slides = [
   {
@@ -98,6 +100,8 @@ export default function Hero({
   searchQuery: string;
   setSearchQuery: (query: string) => void;
 }) {
+  const plugin = React.useRef(Autoplay({delay: 5000, stopOnInteraction: true}));
+
   return (
     <section className="w-full overflow-hidden">
       <Carousel
@@ -105,6 +109,9 @@ export default function Hero({
           align: 'start',
           loop: true,
         }}
+        plugins={[plugin.current]}
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
         className="w-full"
       >
         <CarouselContent>
