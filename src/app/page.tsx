@@ -11,14 +11,12 @@ import Contact from '@/components/sections/contact';
 import Footer from '@/components/common/footer';
 
 export default function Home() {
-  const [searchQuery, setSearchQuery] = React.useState('');
-
   return (
     <div className="flex min-h-dvh flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <Hero searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-        <Courses searchQuery={searchQuery} />
+        <Hero />
+        <Courses />
         <WhyChooseUs />
         <Faculty />
         <SuccessStories />

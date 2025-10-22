@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {features.map((feature) => (
-            <Card key={feature.title} className="text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <Card key={feature.title} className="text-center transition-all duration-300 hover:shadow-lg">
               <CardHeader className="items-center">
                 <div className="rounded-full bg-primary/10 p-4">
                   <feature.icon className="h-8 w-8 text-primary" />

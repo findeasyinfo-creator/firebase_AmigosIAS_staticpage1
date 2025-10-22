@@ -6,7 +6,7 @@ import React from 'react';
 
 function CourseCard({course}: {course: Course}) {
   return (
-    <Card className="flex h-full transform-gpu flex-col overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+    <Card className="flex h-full transform-gpu flex-col overflow-hidden transition-all duration-300 hover:shadow-lg">
       <CardHeader className="flex flex-row items-center gap-4">
         <div className="rounded-lg bg-primary/10 p-3">
           <course.icon className="h-8 w-8 text-primary" />
@@ -20,17 +20,7 @@ function CourseCard({course}: {course: Course}) {
   );
 }
 
-export default function Courses({searchQuery}: {searchQuery: string}) {
-  const filteredCourses = React.useMemo(
-    () =>
-      courses.filter(
-        (course) =>
-          course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          course.description.toLowerCase().includes(searchQuery.toLowerCase())
-      ),
-    [searchQuery]
-  );
-
+export default function Courses() {
   return (
     <section id="courses" className="bg-muted py-16 sm:py-24">
       <div className="container mx-auto px-4 md:px-6">
@@ -41,11 +31,9 @@ export default function Courses({searchQuery}: {searchQuery: string}) {
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {filteredCourses.length > 0 ? (
-            filteredCourses.map((course) => <CourseCard key={course.title} course={course} />)
-          ) : (
-            <p className="text-center text-muted-foreground md:col-span-4">No courses found for your search.</p>
-          )}
+          {courses.map((course) => (
+            <CourseCard key={course.title} course={course} />
+          ))}
         </div>
       </div>
     </section>
