@@ -4,7 +4,7 @@ import type {Course} from '@/lib/data';
 
 function CourseCard({course}: {course: Course}) {
   return (
-    <Card className="flex h-full transform-gpu flex-col overflow-hidden bg-card/80 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+    <Card className="flex h-full transform-gpu flex-col overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
       <CardHeader className="flex flex-row items-center gap-4">
         <div className="rounded-lg bg-primary/10 p-3">
           <course.icon className="h-8 w-8 text-primary" />

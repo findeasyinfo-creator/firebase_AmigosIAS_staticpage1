@@ -8,7 +8,7 @@ function FacultyCard({member}: {member: Faculty}) {
   const image = PlaceHolderImages.find((img) => img.id === member.imageId);
 
   return (
-    <Card className="h-full overflow-hidden text-center transition-shadow duration-300 hover:shadow-xl">
+    <Card className="h-full overflow-hidden text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
       <CardHeader className="items-center bg-muted/50 p-6">
         <Avatar className="h-24 w-24 border-4 border-background shadow-lg">
           {image && <AvatarImage src={image.imageUrl} alt={member.name} data-ai-hint={image.imageHint} />}
