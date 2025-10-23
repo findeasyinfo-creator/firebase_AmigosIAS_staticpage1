@@ -21,16 +21,16 @@ export default function Hero() {
           priority
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/80 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/95 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background to-transparent" />
 
       <div className="container relative z-10 mx-auto flex h-full flex-col items-start justify-center px-4 text-left md:px-6">
         <div className="max-w-3xl">
-          <h1 className="font-headline text-4xl font-bold tracking-tight drop-shadow-lg md:text-5xl lg:text-7xl bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+          <h1 className="font-headline text-4xl font-extrabold tracking-tight drop-shadow-lg md:text-5xl lg:text-7xl bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
             Hyderabad's most trusted and loved IAS Academy
           </h1>
           <p className="mt-6 text-lg text-foreground/80 md:text-xl">
-            Guiding aspirants to achieve their dreams with expert faculty and a proven methodology.
+            Your Journey to Civil Services Starts Here.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button size="lg" asChild>
