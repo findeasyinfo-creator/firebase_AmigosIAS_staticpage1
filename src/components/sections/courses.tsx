@@ -39,7 +39,7 @@ export default function Courses() {
             Structured programs designed for every stage of your UPSC preparation, from foundation to final interview.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           {courses.map((course) => (
             <CourseCard key={course.title} course={course} />
           ))}
