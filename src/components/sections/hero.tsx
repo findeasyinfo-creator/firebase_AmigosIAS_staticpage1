@@ -30,7 +30,7 @@ export default function Hero() {
             Your Journey to Civil Services Starts Here
           </h1>
           <p className="mt-6 text-lg text-foreground/80 md:text-xl">
-            AmigosIAS is Hyderabad's most trusted and loved IAS Academy, guiding aspirants to achieve their dreams with
+            Amigos IAS is Hyderabad's most trusted and loved IAS Academy, guiding aspirants to achieve their dreams with
             expert faculty and a proven methodology.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
