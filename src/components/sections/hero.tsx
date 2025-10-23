@@ -26,7 +26,7 @@ export default function Hero() {
 
       <div className="container relative z-10 mx-auto flex h-full flex-col items-start justify-center px-4 text-left md:px-6">
         <div className="max-w-3xl">
-          <h1 className="font-headline text-4xl font-bold tracking-tight drop-shadow-sm md:text-5xl lg:text-7xl bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+          <h1 className="font-headline text-4xl font-bold tracking-tight drop-shadow-lg md:text-5xl lg:text-7xl bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
             Your Journey to Civil Services Starts Here
           </h1>
           <p className="mt-6 text-lg text-foreground/80 md:text-xl">
