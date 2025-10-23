@@ -6,15 +6,23 @@ const NAV_LINKS = [
   {name: 'Contact', href: '#contact'},
 ];
 
+const Logo = () => {
+  return (
+    <a href="#" className="flex items-center gap-2">
+      <span className="text-xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+        Amigos IAS
+      </span>
+    </a>
+  );
+};
+
 export default function Footer() {
   return (
     <footer className="bg-muted py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="flex flex-col gap-2">
-            <a href="#" className="mb-2 flex items-center gap-2">
-              
-            </a>
+            <Logo />
             <p className="text-muted-foreground">Hyderabad's most trusted and loved IAS Academy.</p>
           </div>
           <div>
