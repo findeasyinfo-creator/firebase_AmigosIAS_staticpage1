@@ -21,8 +21,8 @@ export default function Hero() {
           priority
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent" />
 
       <div className="container relative z-10 mx-auto flex h-full flex-col items-start justify-center px-4 text-left md:px-6">
         <div className="max-w-3xl">
