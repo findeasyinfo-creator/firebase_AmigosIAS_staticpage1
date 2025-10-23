@@ -16,7 +16,7 @@ const NAV_LINKS = [
 const Logo = () => {
   return (
     <a href="#" className="flex items-center gap-2">
-      <span className="font-headline text-2xl font-bold">Amigos IAS</span>
+      
     </a>
   );
 };

@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div className="flex flex-col gap-2">
             <a href="#" className="mb-2 flex items-center gap-2">
-              <span className="font-headline text-2xl font-bold">Amigos IAS</span>
+              
             </a>
             <p className="text-muted-foreground">Hyderabad's most trusted and loved IAS Academy.</p>
           </div>
