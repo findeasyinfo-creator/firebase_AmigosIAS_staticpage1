@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import {PlaceHolderImages} from '@/lib/placeholder-images';
 
 const NAV_LINKS = [
   {name: 'Courses', href: '#courses'},
@@ -9,13 +10,23 @@ const NAV_LINKS = [
 ];
 
 export default function Footer() {
+  const logoImage = PlaceHolderImages.find((img) => img.id === 'logo');
   return (
     <footer className="bg-muted py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="flex flex-col gap-2">
             <a href="#" className="mb-2 flex items-center gap-2">
-              <Image src="/logo.png" alt="Amigos IAS Logo" width={40} height={40} className="rounded-full" />
+              {logoImage && (
+                <Image
+                  src={logoImage.imageUrl}
+                  alt={logoImage.description}
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                  data-ai-hint={logoImage.imageHint}
+                />
+              )}
               <span className="font-headline text-2xl font-bold">Amigos IAS</span>
             </a>
             <p className="text-muted-foreground">Hyderabad's most trusted and loved IAS Academy.</p>
@@ -35,7 +46,7 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-headline text-lg font-semibold">Connect With Us</h3>
             <div className="space-y-2 text-muted-foreground">
-              <p>AmigosIAS Academy, Ashok Nagar, Hyderabad</p>
+              <p>AmigosIAS Academy, Ashok Nagar, Hyderabad</p>p>
               <p>Email: contact@amigosias.com</p>
               <p>Phone: +91 98765 43210</p>
             </div>
