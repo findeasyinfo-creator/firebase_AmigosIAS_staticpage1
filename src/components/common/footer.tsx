@@ -46,7 +46,7 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-headline text-lg font-semibold">Connect With Us</h3>
             <div className="space-y-2 text-muted-foreground">
-              <p>AmigosIAS Academy, Ashok Nagar, Hyderabad</p>p>
+              <p>AmigosIAS Academy, Ashok Nagar, Hyderabad</p>
               <p>Email: contact@amigosias.com</p>
               <p>Phone: +91 98765 43210</p>
             </div>
