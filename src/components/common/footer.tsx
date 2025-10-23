@@ -1,6 +1,3 @@
-import Image from 'next/image';
-import {PlaceHolderImages} from '@/lib/placeholder-images';
-
 const NAV_LINKS = [
   {name: 'Courses', href: '#courses'},
   {name: 'Why Amigos IAS', href: '#why-choose-us'},
@@ -10,23 +7,12 @@ const NAV_LINKS = [
 ];
 
 export default function Footer() {
-  const logoImage = PlaceHolderImages.find((img) => img.id === 'logo');
   return (
     <footer className="bg-muted py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="flex flex-col gap-2">
             <a href="#" className="mb-2 flex items-center gap-2">
-              {logoImage && (
-                <Image
-                  src={logoImage.imageUrl}
-                  alt={logoImage.description}
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                  data-ai-hint={logoImage.imageHint}
-                />
-              )}
               <span className="font-headline text-2xl font-bold">Amigos IAS</span>
             </a>
             <p className="text-muted-foreground">Hyderabad's most trusted and loved IAS Academy.</p>

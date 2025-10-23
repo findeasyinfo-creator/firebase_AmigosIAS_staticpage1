@@ -5,8 +5,6 @@ import {Sheet, SheetContent, SheetTrigger} from '@/components/ui/sheet';
 import {cn} from '@/lib/utils';
 import {Menu} from 'lucide-react';
 import React from 'react';
-import Image from 'next/image';
-import {PlaceHolderImages} from '@/lib/placeholder-images';
 
 const NAV_LINKS = [
   {name: 'Courses', href: '#courses'},
@@ -16,20 +14,8 @@ const NAV_LINKS = [
 ];
 
 const Logo = () => {
-  const logoImage = PlaceHolderImages.find((img) => img.id === 'logo');
-
   return (
     <a href="#" className="flex items-center gap-2">
-      {logoImage && (
-        <Image
-          src={logoImage.imageUrl}
-          alt={logoImage.description}
-          width={40}
-          height={40}
-          className="rounded-full"
-          data-ai-hint={logoImage.imageHint}
-        />
-      )}
       <span className="font-headline text-2xl font-bold">Amigos IAS</span>
     </a>
   );
