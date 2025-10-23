@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-orange-500/50 to-red-500/50 opacity-20 blur-3xl glow-shadow" />
             <h1
-              className="font-headline text-4xl font-extrabold tracking-tight drop-shadow-lg md:text-5xl lg:text-7xl bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent animated-gradient fade-in-up"
+              className="font-headline text-4xl font-extrabold tracking-tight drop-shadow-lg md:text-5xl lg:text-7xl bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent animated-gradient fade-in-up"
               style={{animationDelay: '0.2s'}}
             >
               Hyderabad's most trusted and loved IAS Academy
