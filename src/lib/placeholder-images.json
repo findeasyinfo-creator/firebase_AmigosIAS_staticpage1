@@ -65,6 +65,24 @@
       "description": "Students celebrating graduation",
       "imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGdyYWR1YXRpb258ZW58MHx8fHwxNzYyMTc5Mzk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "students graduation"
+    },
+    {
+      "id": "hero-background-4",
+      "description": "A focused student writing notes in a notebook",
+      "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50JTIwd3JpdGluZ3xlbnwwfHx8fDE3NjIyMDE2NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student writing"
+    },
+    {
+      "id": "hero-background-5",
+      "description": "An inspiring shot of a library full of books",
+      "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsaWJyYXJ5fGVufDB8fHx8MTc2MjIwMTY4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "library books"
+    },
+    {
+      "id": "hero-background-6",
+      "description": "A group of students collaborating and studying together",
+      "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdHVkZW50cyUyMGNvbGxhYm9yYXRpbmd8ZW58MHx8fHwxNzYyMjAxNzIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students collaborating"
     }
   ]
 }

@@ -22,6 +22,21 @@ const slideContent = [
     id: 'hero-background-3',
     headline: 'Achieve Your Dream of Becoming a Civil Servant',
     subheadline: 'Join thousands of successful alumni who started with us.',
+  },
+  {
+    id: 'hero-background-4',
+    headline: 'Personalized Mentorship for Every Aspirant',
+    subheadline: 'Our faculty is dedicated to your individual success.',
+  },
+  {
+    id: 'hero-background-5',
+    headline: 'State-of-the-Art Learning Environment',
+    subheadline: 'Study in a modern and inspiring atmosphere.',
+  },
+  {
+    id: 'hero-background-6',
+    headline: 'A Legacy of Excellence and Success',
+    subheadline: 'Be a part of our ever-growing family of achievers.',
   }
 ]
 
@@ -60,7 +75,7 @@ export default function Hero() {
                     priority={index === 0}
                   />
                   <div className="absolute inset-0 bg-black/50" />
-                  <div className="container absolute inset-0 z-10 mx-auto flex h-full flex-col justify-center px-4 text-left md:px-6">
+                  <div className="container absolute inset-0 z-10 mx-auto flex h-full flex-col items-center justify-end px-4 pb-32 text-center md:px-6">
                     <div className="max-w-3xl">
                       <h1
                         className="font-headline text-4xl font-extrabold tracking-tight text-white drop-shadow-lg md:text-5xl lg:text-7xl"
@@ -84,7 +99,7 @@ export default function Hero() {
       </Carousel>
       
       <div className="container absolute bottom-10 left-1/2 z-20 mx-auto w-full -translate-x-1/2 px-4 md:px-6">
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4">
             <Button size="lg" asChild>
               <a href="#courses">Join Now</a>
             </Button>
