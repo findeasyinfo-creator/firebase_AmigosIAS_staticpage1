@@ -35,12 +35,12 @@ function AboutHero() {
     <section className="relative py-20 md:py-32">
       {heroImage && (
          <Image
+          key={heroImage.id}
           src={heroImage.imageUrl}
           alt={heroImage.description}
           fill
           className="object-cover"
           data-ai-hint={heroImage.imageHint}
-          priority
         />
       )}
       <div className="absolute inset-0 bg-black/60" />

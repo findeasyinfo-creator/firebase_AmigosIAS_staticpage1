@@ -38,6 +38,7 @@ function CurrentAffairsHero() {
     <section className="relative py-20 md:py-32">
       {heroImage && (
          <Image
+          key={heroImage.id}
           src={heroImage.imageUrl}
           alt={heroImage.description}
           fill
