@@ -1,14 +1,13 @@
 const NAV_LINKS = [
   {name: 'Courses', href: '#courses'},
-  {name: 'Why Amigos IAS', href: '#why-choose-us'},
-  {name: 'Faculty', href: '#faculty'},
+  {name: 'About Us', href: '/about'},
   {name: 'Testimonials', href: '#success-stories'},
   {name: 'Contact', href: '#contact'},
 ];
 
 const Logo = () => {
   return (
-    <a href="#" className="flex items-center gap-2">
+    <a href="/" className="flex items-center gap-2">
       <span className="text-xl font-extrabold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
         Amigos IAS
       </span>
@@ -17,6 +16,7 @@ const Logo = () => {
 };
 
 export default function Footer() {
+   const isHomePage = typeof window !== 'undefined' && window.location.pathname === '/';
   return (
     <footer className="bg-muted py-12">
       <div className="container mx-auto px-4 md:px-6">
@@ -28,13 +28,24 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-headline text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
-              {NAV_LINKS.map((link) => (
-                <li key={link.href}>
-                  <a href={link.href} className="text-muted-foreground hover:text-primary">
-                    {link.name}
-                  </a>
-                </li>
-              ))}
+              {NAV_LINKS.map((link) => {
+                 if (!isHomePage && (link.href.startsWith('#'))) {
+                    return (
+                        <li key={link.href}>
+                        <a href={`/${link.href}`} className="text-muted-foreground hover:text-primary">
+                            {link.name}
+                        </a>
+                        </li>
+                    );
+                 }
+                return (
+                  <li key={link.href}>
+                    <a href={link.href} className="text-muted-foreground hover:text-primary">
+                      {link.name}
+                    </a>
+                  </li>
+                )
+              })}
             </ul>
           </div>
           <div>

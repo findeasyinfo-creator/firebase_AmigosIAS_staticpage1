@@ -8,15 +8,14 @@ import React from 'react';
 
 const NAV_LINKS = [
   {name: 'Courses', href: '#courses'},
-  {name: 'Why Amigos IAS', href: '#why-choose-us'},
-  {name: 'Faculty', href: '#faculty'},
+  {name: 'About Us', href: '/about'},
   {name: 'Success Stories', href: '#success-stories'},
   {name: 'Current Affairs', href: '/current-affairs'},
 ];
 
 const Logo = () => {
   return (
-    <a href="#" className="flex items-center gap-2">
+    <a href="/" className="flex items-center gap-2">
       <span className="text-2xl font-extrabold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
         Amigos IAS
       </span>
@@ -44,6 +43,8 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isHomePage = typeof window !== 'undefined' && window.location.pathname === '/';
+
   return (
     <header
       className={cn(
@@ -55,16 +56,25 @@ export default function Header() {
         <Logo />
 
         <nav className="hidden items-center gap-2 md:flex">
-          {NAV_LINKS.map((link) => (
-            <NavLink key={link.href} href={link.href}>
-              {link.name}
-            </NavLink>
-          ))}
+          {NAV_LINKS.map((link) => {
+             if (!isHomePage && (link.href.startsWith('#'))) {
+                return (
+                    <NavLink key={link.href} href={`/${link.href}`}>
+                        {link.name}
+                    </NavLink>
+                );
+             }
+             return (
+                <NavLink key={link.href} href={link.href}>
+                    {link.name}
+                </NavLink>
+             );
+          })}
         </nav>
 
         <div className="flex items-center gap-2">
           <Button asChild className="hidden md:inline-flex">
-            <a href="#contact">Contact Us</a>
+            <a href={isHomePage ? '#contact' : '/#contact'}>Contact Us</a>
           </Button>
           <div className="md:hidden">
             <Sheet>
@@ -78,18 +88,23 @@ export default function Header() {
                 <div className="flex flex-col gap-6 p-6">
                   <Logo />
                   <nav className="flex flex-col gap-2">
-                    {NAV_LINKS.map((link) => (
-                      <a
-                        key={link.href}
-                        href={link.href}
-                        className="rounded-lg p-3 text-lg font-medium hover:bg-muted"
-                      >
-                        {link.name}
-                      </a>
-                    ))}
+                    {NAV_LINKS.map((link) => {
+                       if (!isHomePage && (link.href.startsWith('#'))) {
+                        return (
+                            <a key={link.href} href={`/${link.href}`} className="rounded-lg p-3 text-lg font-medium hover:bg-muted">
+                                {link.name}
+                            </a>
+                        );
+                       }
+                       return (
+                        <a key={link.href} href={link.href} className="rounded-lg p-3 text-lg font-medium hover:bg-muted">
+                            {link.name}
+                        </a>
+                       );
+                    })}
                   </nav>
                   <Button asChild>
-                    <a href="#contact">Contact Us</a>
+                    <a href={isHomePage ? '#contact' : '/#contact'}>Contact Us</a>
                   </Button>
                 </div>
               </SheetContent>

@@ -4,8 +4,6 @@ import React from 'react';
 import Header from '@/components/common/header';
 import Hero from '@/components/sections/hero';
 import Courses from '@/components/sections/courses';
-import WhyChooseUs from '@/components/sections/why-choose-us';
-import Faculty from '@/components/sections/faculty';
 import SuccessStories from '@/components/sections/success-stories';
 import Contact from '@/components/sections/contact';
 import Footer from '@/components/common/footer';
@@ -17,8 +15,6 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Courses />
-        <WhyChooseUs />
-        <Faculty />
         <SuccessStories />
         <Contact />
       </main>
