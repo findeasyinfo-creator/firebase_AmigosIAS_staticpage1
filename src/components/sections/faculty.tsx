@@ -29,7 +29,7 @@ export default function Faculty() {
     <section id="faculty" className="py-16 sm:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Meet Our Mentors</h2>
+          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Our Esteemed Faculty</h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Learn from the best. Our faculty comprises experienced educators, subject matter experts, and former
             civil servants.
