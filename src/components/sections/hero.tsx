@@ -81,7 +81,7 @@ export default function Hero() {
         </CarouselContent>
       </Carousel>
       
-      <div className="container absolute bottom-10 left-1/2 z-20 mx-auto w-full -translate-x-1/2 px-4 md:bottom-20 md:px-6">
+      <div className="container absolute bottom-10 left-1/2 z-20 mx-auto w-full -translate-x-1/2 px-4 md:px-6">
         <div className="flex flex-wrap items-center gap-4">
             <Button size="lg" asChild>
               <a href="#courses">Join Now</a>
