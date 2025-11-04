@@ -5,7 +5,7 @@ import {PlaceHolderImages} from '@/lib/placeholder-images';
 import Image from 'next/image';
 import React from 'react';
 import Autoplay from 'embla-carousel-autoplay';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 
 const slideContent = [
   {
@@ -96,6 +96,8 @@ export default function Hero() {
             )
           })}
         </CarouselContent>
+        <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 text-white bg-black/20 hover:bg-black/40 border-white/50 hover:border-white" />
+        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 text-white bg-black/20 hover:bg-black/40 border-white/50 hover:border-white" />
       </Carousel>
       
       <div className="container absolute bottom-10 left-1/2 z-20 mx-auto w-full -translate-x-1/2 px-4 md:px-6">
