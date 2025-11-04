@@ -60,7 +60,7 @@ export default function Hero() {
                     priority={index === 0}
                   />
                   <div className="absolute inset-0 bg-black/50" />
-                  <div className="container absolute inset-0 z-10 mx-auto flex h-full flex-col items-start justify-center px-4 text-left md:px-6">
+                  <div className="container absolute inset-0 z-10 mx-auto flex h-full flex-col justify-center px-4 text-left md:px-6">
                     <div className="max-w-3xl">
                       <h1
                         className="font-headline text-4xl font-extrabold tracking-tight text-white drop-shadow-lg md:text-5xl lg:text-7xl"
