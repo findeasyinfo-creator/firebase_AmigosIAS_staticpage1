@@ -95,7 +95,19 @@ export const successStories: SuccessStory[] = [
   },
 ];
 
-export type UPSCSubject = 'GS Paper I' | 'GS Paper II' | 'GS Paper III' | 'GS Paper IV' | 'Essay' | 'General';
+export type UPSCSubject =
+  | 'History'
+  | 'Art & Culture'
+  | 'Indian Society'
+  | 'Indian Polity'
+  | 'Governance'
+  | 'International Relations'
+  | 'Indian Economy'
+  | 'Science & Technology'
+  | 'Environment & Ecology'
+  | 'Internal Security'
+  | 'Disaster Management'
+  | 'Ethics';
 
 export interface CurrentAffairsArticle {
   id: number;
@@ -112,7 +124,7 @@ export const currentAffairsArticles: CurrentAffairsArticle[] = [
     title: 'New Developments in India\'s Space Program',
     summary: 'ISRO announces plans for its next lunar mission, aiming to explore the south pole of the moon in more detail.',
     date: '2024-07-28',
-    subject: 'GS Paper III',
+    subject: 'Science & Technology',
     tags: ['science', 'technology', 'space', 'isro'],
   },
   {
@@ -120,7 +132,7 @@ export const currentAffairsArticles: CurrentAffairsArticle[] = [
     title: 'Understanding the Uniform Civil Code (UCC)',
     summary: 'A deep dive into the legal and social implications of the proposed Uniform Civil Code in India.',
     date: '2024-07-27',
-    subject: 'GS Paper II',
+    subject: 'Indian Polity',
     tags: ['polity', 'law', 'constitution', 'ucc'],
   },
   {
@@ -128,7 +140,7 @@ export const currentAffairsArticles: CurrentAffairsArticle[] = [
     title: 'Monsoon Impact on Indian Agriculture',
     summary: 'Analyzing the effects of the delayed monsoon on crop yields and the rural economy.',
     date: '2024-07-26',
-    subject: 'GS Paper III',
+    subject: 'Indian Economy',
     tags: ['economy', 'agriculture', 'geography', 'monsoon'],
   },
   {
@@ -136,7 +148,7 @@ export const currentAffairsArticles: CurrentAffairsArticle[] = [
     title: 'The Ethics of Artificial Intelligence in Governance',
     summary: 'Exploring the ethical dilemmas and frameworks required for deploying AI in public administration.',
     date: '2024-07-25',
-    subject: 'GS Paper IV',
+    subject: 'Ethics',
     tags: ['ethics', 'ai', 'governance', 'technology'],
   },
   {
@@ -144,7 +156,7 @@ export const currentAffairsArticles: CurrentAffairsArticle[] = [
     title: 'India\'s Role in Global Diplomacy',
     summary: 'Examining India\'s evolving foreign policy and its position on major international issues.',
     date: '2024-07-24',
-    subject: 'GS Paper II',
+    subject: 'International Relations',
     tags: ['international relations', 'foreign policy', 'diplomacy'],
   },
   {
@@ -152,7 +164,7 @@ export const currentAffairsArticles: CurrentAffairsArticle[] = [
     title: 'Challenges of Urbanization in India',
     summary: 'A look at the growing pains of Indian cities, including housing, sanitation, and transportation issues.',
     date: '2024-07-23',
-    subject: 'GS Paper I',
+    subject: 'Indian Society',
     tags: ['social issues', 'urbanization', 'society'],
   },
   {
@@ -160,15 +172,15 @@ export const currentAffairsArticles: CurrentAffairsArticle[] = [
     title: 'Financial Inclusion and Digital Payments',
     summary: 'How digital payment systems are transforming financial inclusion in rural and urban India.',
     date: '2024-07-22',
-    subject: 'GS Paper III',
+    subject: 'Indian Economy',
     tags: ['economy', 'banking', 'digital india'],
   },
   {
     id: 8,
-    title: 'Philosophical basis of goodness and ultimate happiness',
-    summary: 'The concept of "Eudaimonia" and its relevance in modern life and ethical decision-making.',
+    title: 'Ancient Indus Valley Civilization Insights',
+    summary: 'New archaeological findings shed light on the trade routes and cultural practices of the Indus Valley Civilization.',
     date: '2024-07-21',
-    subject: 'Essay',
-    tags: ['philosophy', 'ethics', 'essay topic'],
+    subject: 'History',
+    tags: ['history', 'archaeology', 'indus valley'],
   },
 ];

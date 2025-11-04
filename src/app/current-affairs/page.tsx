@@ -10,12 +10,25 @@ import { Calendar } from '@/components/ui/calendar';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
-import { format, type DayPicker } from 'date-fns';
+import { format } from 'date-fns';
 import { currentAffairsArticles, type CurrentAffairsArticle, type UPSCSubject } from '@/lib/data';
 import Header from '@/components/common/header';
 import Footer from '@/components/common/footer';
 
-const subjects: UPSCSubject[] = ['GS Paper I', 'GS Paper II', 'GS Paper III', 'GS Paper IV', 'Essay', 'General'];
+const subjects: UPSCSubject[] = [
+  'History',
+  'Art & Culture',
+  'Indian Society',
+  'Indian Polity',
+  'Governance',
+  'International Relations',
+  'Indian Economy',
+  'Science & Technology',
+  'Environment & Ecology',
+  'Internal Security',
+  'Disaster Management',
+  'Ethics',
+];
 
 export default function CurrentAffairsPage() {
   const [searchQuery, setSearchQuery] = useState('');
