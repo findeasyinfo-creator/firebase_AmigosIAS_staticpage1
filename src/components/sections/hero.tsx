@@ -64,11 +64,13 @@ export default function Hero() {
                     <div className="max-w-3xl">
                       <h1
                         className="font-headline text-4xl font-extrabold tracking-tight text-white drop-shadow-lg md:text-5xl lg:text-7xl"
+                        style={{textShadow: '2px 2px 8px rgba(0,0,0,0.7)'}}
                       >
                         {content.headline}
                       </h1>
                       <p
                         className="mt-6 text-lg text-white/90 md:text-xl"
+                        style={{textShadow: '1px 1px 4px rgba(0,0,0,0.7)'}}
                       >
                         {content.subheadline}
                       </p>
@@ -86,7 +88,7 @@ export default function Hero() {
             <Button size="lg" asChild>
               <a href="#courses">Join Now</a>
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-black" asChild>
+            <Button size="lg" variant="outline" className="border-accent bg-transparent text-white hover:bg-accent hover:text-accent-foreground" asChild>
               <a href="#contact">Enquire Now</a>
             </Button>
         </div>
