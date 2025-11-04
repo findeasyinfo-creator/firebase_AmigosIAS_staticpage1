@@ -19,11 +19,6 @@ const slideContent = [
     subheadline: 'From Prelims to Interview, we cover it all.',
   },
   {
-    id: 'hero-background-3',
-    headline: 'Achieve Your Dream of Becoming a Civil Servant',
-    subheadline: 'Join thousands of successful alumni who started with us.',
-  },
-  {
     id: 'hero-background-4',
     headline: 'Personalized Mentorship for Every Aspirant',
     subheadline: 'Our faculty is dedicated to your individual success.',
