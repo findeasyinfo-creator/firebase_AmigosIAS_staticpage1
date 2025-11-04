@@ -14,6 +14,8 @@ import { format } from 'date-fns';
 import { currentAffairsArticles, type CurrentAffairsArticle, type UPSCSubject } from '@/lib/data';
 import Header from '@/components/common/header';
 import Footer from '@/components/common/footer';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Image from 'next/image';
 
 const subjects: UPSCSubject[] = [
   'History',
@@ -29,6 +31,33 @@ const subjects: UPSCSubject[] = [
   'Disaster Management',
   'Ethics',
 ];
+
+function CurrentAffairsHero() {
+  const heroImage = PlaceHolderImages.find((img) => img.id === 'current-affairs-hero');
+  return (
+    <section className="relative py-20 md:py-32">
+      {heroImage && (
+         <Image
+          src={heroImage.imageUrl}
+          alt={heroImage.description}
+          fill
+          className="object-cover"
+          data-ai-hint={heroImage.imageHint}
+          priority
+        />
+      )}
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="container relative mx-auto px-4 md:px-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <h1 className="font-headline text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">Current Affairs</h1>
+          <p className="mt-4 text-lg text-white/90">
+            Stay updated with the latest news and analysis relevant for UPSC CSE preparation.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function CurrentAffairsPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -56,16 +85,7 @@ export default function CurrentAffairsPage() {
     <div className="flex min-h-dvh flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <section className="bg-muted/50 py-12">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Current Affairs</h1>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Stay updated with the latest news and analysis relevant for UPSC CSE preparation.
-              </p>
-            </div>
-          </div>
-        </section>
+        <CurrentAffairsHero />
 
         <section className="py-12">
           <div className="container mx-auto px-4 md:px-6">
