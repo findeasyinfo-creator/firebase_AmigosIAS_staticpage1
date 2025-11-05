@@ -5,6 +5,7 @@ import {courses} from '@/lib/data';
 import type {Course} from '@/lib/data';
 import {ArrowRight, Phone} from 'lucide-react';
 import React from 'react';
+import Link from 'next/link';
 
 function CourseCard({course}: {course: Course}) {
   return (
@@ -20,8 +21,8 @@ function CourseCard({course}: {course: Course}) {
       </CardHeader>
       <CardContent className="flex-grow" />
       <CardFooter className="grid grid-cols-2 gap-4 p-6 pt-0">
-        <Button variant="outline">
-          More Details
+        <Button variant="outline" asChild>
+          <Link href={`/course/${course.slug}`}>More Details</Link>
         </Button>
         <Button>
           Register for Demo
@@ -42,7 +43,7 @@ export default function Courses() {
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-          {courses.map((course) => (
+          {courses.slice(0, 4).map((course) => (
             <CourseCard key={course.title} course={course} />
           ))}
         </div>

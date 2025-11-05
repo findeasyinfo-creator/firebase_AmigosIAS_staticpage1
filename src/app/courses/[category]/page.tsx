@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useMemo } from 'react';
+import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -44,8 +45,8 @@ const CourseCard = ({ course }: { course: Course }) => {
          </div>
       </CardContent>
       <CardFooter className="grid grid-cols-2 gap-4 p-6 pt-0">
-        <Button variant="outline">
-          More Details
+        <Button variant="outline" asChild>
+          <Link href={`/course/${course.slug}`}>More Details</Link>
         </Button>
         <Button>
           Register for Demo
@@ -121,6 +122,7 @@ export default function CourseCategoryPage() {
                             <SelectItem value="all">All Modes</SelectItem>
                             <SelectItem value="online">Online</SelectItem>
                             <SelectItem value="offline">Offline</SelectItem>
+                            <SelectItem value="hybrid">Hybrid</SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
@@ -128,7 +130,7 @@ export default function CourseCategoryPage() {
                 {filteredCourses.length > 0 ? (
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                         {filteredCourses.map((course) => (
-                            <CourseCard key={course.title} course={course} />
+                            <CourseCard key={course.slug} course={course} />
                         ))}
                     </div>
                 ) : (
