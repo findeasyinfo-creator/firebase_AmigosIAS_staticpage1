@@ -30,24 +30,12 @@ const values = [
 ];
 
 function AboutHero() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'about-hero');
   return (
-    <section className="relative py-20 md:py-32">
-      {heroImage && (
-         <Image
-          key={heroImage.id}
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          fill
-          className="object-cover"
-          data-ai-hint={heroImage.imageHint}
-        />
-      )}
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="container relative mx-auto px-4 md:px-6">
+    <section className="bg-primary py-20 text-primary-foreground md:py-24">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="font-headline text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">About Amigos IAS</h1>
-          <p className="mt-4 text-lg text-white/90">
+          <h1 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">About Amigos IAS</h1>
+          <p className="mt-4 text-lg text-primary-foreground/90">
             Learn about our journey, our values, and the team dedicated to guiding you towards success in the Civil Services Examination.
           </p>
         </div>
