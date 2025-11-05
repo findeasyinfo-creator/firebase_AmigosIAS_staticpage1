@@ -3,7 +3,7 @@ import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
 import {courses} from '@/lib/data';
 import type {Course} from '@/lib/data';
-import {ArrowRight} from 'lucide-react';
+import {ArrowRight, Phone} from 'lucide-react';
 import React from 'react';
 
 function CourseCard({course}: {course: Course}) {
@@ -19,10 +19,12 @@ function CourseCard({course}: {course: Course}) {
         </div>
       </CardHeader>
       <CardContent className="flex-grow" />
-      <CardFooter className="p-6 pt-0">
-        <Button variant="outline" className="w-full">
-          Learn More
-          <ArrowRight className="ml-2 h-4 w-4" />
+      <CardFooter className="grid grid-cols-2 gap-4 p-6 pt-0">
+        <Button variant="outline">
+          More Details
+        </Button>
+        <Button>
+          Register for Demo
         </Button>
       </CardFooter>
     </Card>

@@ -43,10 +43,12 @@ const CourseCard = ({ course }: { course: Course }) => {
             </div>
          </div>
       </CardContent>
-      <CardFooter className="p-6 pt-0">
-        <Button variant="outline" className="w-full">
-          Learn More
-          <ArrowRight className="ml-2 h-4 w-4" />
+      <CardFooter className="grid grid-cols-2 gap-4 p-6 pt-0">
+        <Button variant="outline">
+          More Details
+        </Button>
+        <Button>
+          Register for Demo
         </Button>
       </CardFooter>
     </Card>
