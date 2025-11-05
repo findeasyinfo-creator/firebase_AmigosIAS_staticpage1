@@ -98,7 +98,7 @@ export default function Hero() {
       <div className="container absolute bottom-10 left-1/2 z-20 mx-auto w-full -translate-x-1/2 px-4 md:px-6">
         <div className="flex flex-wrap items-center justify-center gap-4">
             <Button size="lg" asChild>
-              <a href="#courses">Join Now</a>
+              <a href="/courses">Join Now</a>
             </Button>
             <Button size="lg" variant="outline" className="border-accent bg-transparent text-white hover:bg-accent hover:text-accent-foreground" asChild>
               <a href="#contact">Enquire Now</a>

@@ -1,32 +1,148 @@
 import type {LucideIcon} from 'lucide-react';
-import {BookOpenCheck, PenSquare, UserCheck, Presentation, GraduationCap, Award} from 'lucide-react';
+import {BookOpenCheck, PenSquare, UserCheck, Presentation, GraduationCap, Award, Briefcase, TestTube2, Globe} from 'lucide-react';
+
+export type CourseCategorySlug = 
+  | 'upsc-prep'
+  | 'optional-subjects'
+  | 'test-series'
+  | 'interview-guidance'
+  | 'weekend-courses';
+
+export interface CourseCategory {
+    slug: CourseCategorySlug;
+    title: string;
+    description: string;
+}
+
+export const courseCategories: CourseCategory[] = [
+    {
+        slug: 'upsc-prep',
+        title: 'UPSC Prep+',
+        description: 'Comprehensive programs for end-to-end UPSC CSE preparation.'
+    },
+    {
+        slug: 'optional-subjects',
+        title: 'Optional Subjects',
+        description: 'Specialized coaching for a wide range of optional subjects.'
+    },
+    {
+        slug: 'test-series',
+        title: 'Test Series',
+        description: 'Rigorous test series to evaluate your preparation and improve scores.'
+    },
+    {
+        slug: 'interview-guidance',
+        title: 'Interview Guidance Program',
+        description: 'Expert guidance to excel in the UPSC personality test.'
+    },
+    {
+        slug: 'weekend-courses',
+        title: 'Weekend / Working Professionals',
+        description: 'Flexible courses designed for working professionals and students.'
+    }
+];
 
 export interface Course {
   title: string;
-  description: string;
+  description: string; // Short description for homepage
+  detailedDescription: string; // Longer description for course page
   icon: LucideIcon;
+  category: CourseCategorySlug;
+  tags: string[];
+  duration: string;
+  mode: 'Online' | 'Offline' | 'Hybrid';
 }
 
 export const courses: Course[] = [
   {
     title: 'Integrated Prelims cum Mains',
     description: 'A comprehensive program covering the entire syllabus for both Prelims and Mains in an integrated manner.',
+    detailedDescription: 'This flagship program is a one-stop solution for UPSC CSE preparation. It covers GS papers, CSAT, Essay, and optional subject preparation from scratch to an advanced level.',
     icon: BookOpenCheck,
+    category: 'upsc-prep',
+    tags: ['Foundation', 'Comprehensive'],
+    duration: '12 Months',
+    mode: 'Hybrid',
   },
   {
     title: 'Prelims Value Addition Program',
     description: 'A specialized course to boost your Prelims score with targeted content, test series, and strategy sessions.',
+    detailedDescription: 'Designed for aspirants who have completed their basic preparation, this course focuses on score maximization through advanced concepts, current affairs linkage, and intensive MCQ practice.',
     icon: GraduationCap,
+    category: 'upsc-prep',
+    tags: ['Prelims', 'Score Booster'],
+    duration: '4 Months',
+    mode: 'Online',
   },
   {
     title: 'Mains Value Addition Program',
     description: 'Enhance your Mains performance through intensive answer writing practice, essay guidance, and ethics case studies.',
+    detailedDescription: 'Improve your answer writing skills, learn effective structuring, and enrich your content for all GS papers and Essay. Includes personalized feedback and model answers.',
     icon: PenSquare,
+    category: 'upsc-prep',
+    tags: ['Mains', 'Answer Writing'],
+    duration: '3 Months',
+    mode: 'Hybrid',
   },
   {
     title: 'Interview Guidance Program',
     description: 'Master the art of the UPSC interview with mock panels, DAF analysis, and personalized feedback from experts.',
+    detailedDescription: 'Our IGP is led by retired bureaucrats and subject matter experts. It includes multiple mock interviews, DAF-based personal sessions, and classes on current national and international issues.',
     icon: UserCheck,
+    category: 'interview-guidance',
+    tags: ['Personality Test', 'Mock Interview'],
+    duration: '1 Month',
+    mode: 'Offline',
+  },
+  {
+    title: 'PSIR Optional Foundation',
+    description: 'Political Science & International Relations optional course.',
+    detailedDescription: 'A comprehensive course covering both Paper 1 and Paper 2 of the PSIR optional subject, with a focus on conceptual clarity and interlinkages with current events.',
+    icon: Globe,
+    category: 'optional-subjects',
+    tags: ['PSIR', 'Optional'],
+    duration: '6 Months',
+    mode: 'Online',
+  },
+    {
+    title: 'Sociology Optional Course',
+    description: 'In-depth coverage of Sociology optional syllabus.',
+    detailedDescription: 'Master the concepts of Sociology with our expert faculty. The course includes detailed notes, answer writing practice, and linkage with contemporary Indian society.',
+    icon: Award,
+    category: 'optional-subjects',
+    tags: ['Sociology', 'Optional'],
+    duration: '5 Months',
+    mode: 'Hybrid',
+  },
+  {
+    title: 'Prelims Test Series 2025',
+    description: 'Comprehensive test series for UPSC Prelims.',
+    detailedDescription: 'Includes over 30 tests, including sectional, full-length, and CSAT papers, designed to simulate the UPSC exam pattern. Detailed performance analysis and explanations provided.',
+    icon: TestTube2,
+    category: 'test-series',
+    tags: ['Prelims', 'MCQ Practice'],
+    duration: '6 Months',
+    mode: 'Online',
+  },
+    {
+    title: 'Mains Test Series 2025',
+    description: 'Extensive answer writing practice for UPSC Mains.',
+    detailedDescription: 'A series of 20+ tests including sectional, essay, and full-length GS papers. Features high-quality questions, detailed evaluation with feedback, and model answers.',
+    icon: TestTube2,
+    category: 'test-series',
+    tags: ['Mains', 'Answer Writing'],
+    duration: '4 Months',
+    mode: 'Hybrid',
+  },
+  {
+    title: 'Weekend GS Foundation Course',
+    description: 'A comprehensive GS course for working professionals.',
+    detailedDescription: 'Covering the entire GS syllabus for Prelims and Mains, this course is designed with a flexible schedule for those who are working or in college. Classes are held on Saturdays and Sundays.',
+    icon: Briefcase,
+    category: 'weekend-courses',
+    tags: ['Working Professionals', 'Foundation'],
+    duration: '15 Months',
+    mode: 'Hybrid',
   },
 ];
 

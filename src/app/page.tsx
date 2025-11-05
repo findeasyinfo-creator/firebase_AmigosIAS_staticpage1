@@ -7,6 +7,7 @@ import Courses from '@/components/sections/courses';
 import SuccessStories from '@/components/sections/success-stories';
 import Contact from '@/components/sections/contact';
 import Footer from '@/components/common/footer';
+import WhyChooseUs from '@/components/sections/why-choose-us';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <WhyChooseUs />
         <Courses />
         <SuccessStories />
         <Contact />

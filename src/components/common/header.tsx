@@ -7,7 +7,7 @@ import {Menu} from 'lucide-react';
 import React from 'react';
 
 const NAV_LINKS = [
-  {name: 'Courses', href: '#courses'},
+  {name: 'Courses', href: '/courses'},
   {name: 'About Us', href: '/about'},
   {name: 'Success Stories', href: '#success-stories'},
   {name: 'Current Affairs', href: '/current-affairs'},

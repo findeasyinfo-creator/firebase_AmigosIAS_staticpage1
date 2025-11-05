@@ -1,5 +1,5 @@
 const NAV_LINKS = [
-  {name: 'Courses', href: '#courses'},
+  {name: 'Courses', href: '/courses'},
   {name: 'About Us', href: '/about'},
   {name: 'Testimonials', href: '#success-stories'},
   {name: 'Contact', href: '#contact'},
